@@ -1,7 +1,4 @@
-<div *ngIf="!current">
-  no data
-</div>
-<div *ngIf="current" class="currentWeather">
+<div *ngIf="current$ | async as current" class="currentWeather">
   <div class="location">
     <div>{{current.city}}, {{current.country}}</div>
     <div>{{current.date | date: 'fullDate'}}</div>

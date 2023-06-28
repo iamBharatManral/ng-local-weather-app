@@ -1,0 +1,10 @@
+<div class="citySearch">
+  <div class="hint">Specify country code like 'Paris, US'</div>
+  <form class="form">
+    <label for="city" class="city">City Name or Postal Code</label>
+    <div class="search"><img src="/assets/img/search.svg" alt="search icon"> <input type="text" id="city" [formControl]="search"></div>
+  </form>
+  <div class="invalid" *ngIf="search.invalid">
+    {{getErrorMessage()}}
+  </div>
+</div>
