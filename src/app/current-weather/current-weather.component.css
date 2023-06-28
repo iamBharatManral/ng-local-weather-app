@@ -30,7 +30,7 @@
   font-weight: bold;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 450px) {
   .currentWeather{
     width: 400px;
     margin: 1rem auto;
