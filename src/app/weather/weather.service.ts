@@ -81,7 +81,7 @@ export class WeatherService implements IWeatherService {
       country: data.sys.country,
       date: data.dt * 1000,
       image: `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`,
-      temperature: this.convertKelvinToFahrenheit(data.main.temp),
+      temperature: this.convertKelvinToDegrees(data.main.temp),
       description: data.weather[0].description
     }
   }
@@ -94,5 +94,8 @@ export class WeatherService implements IWeatherService {
 
   private convertKelvinToFahrenheit(kelvin: number): number {
     return kelvin * 9 / 5 - 459.67
+  }
+  private convertKelvinToDegrees(kelvin: number):  number{
+    return kelvin - 273.15
   }
 }
